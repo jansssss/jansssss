@@ -58,80 +58,114 @@
     </div>
     
     <!-- 포트폴리오 섹션 시작 -->
-    <div class="container px-4 py-5">
-      <h2 class="pb-2 border-bottom fw-bold">포트폴리오</h2>
-      <p class="text-muted mb-4">내가 그동안 만든 사이트들</p>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+    <style>
+      .portfolio-section { padding: 3rem 0 2rem; }
+      .portfolio-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #94a3b8;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+      }
+      .portfolio-title {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #0a1628;
+        margin-bottom: 2.2rem;
+        letter-spacing: -0.02em;
+      }
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+      @media (max-width: 768px) {
+        .portfolio-grid { grid-template-columns: 1fr; }
+      }
+      .pf-card {
+        display: block;
+        text-decoration: none;
+        border: 1px solid #e8edf3;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: box-shadow 0.2s, transform 0.2s;
+        background: #fff;
+      }
+      .pf-card:hover {
+        box-shadow: 0 8px 28px rgba(10,22,40,0.10);
+        transform: translateY(-3px);
+      }
+      .pf-thumb {
+        width: 100%;
+        height: 148px;
+        object-fit: cover;
+        display: block;
+        background: #f1f5f9;
+      }
+      .pf-info {
+        padding: 0.9rem 1rem 1rem;
+        border-top: 1px solid #f0f4f8;
+      }
+      .pf-name {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: #0a1628;
+        margin: 0 0 0.18rem;
+        letter-spacing: -0.01em;
+      }
+      .pf-url {
+        font-size: 0.75rem;
+        color: #94a3b8;
+        margin: 0;
+        letter-spacing: 0.01em;
+      }
+    </style>
 
-        <!-- PL시스템 -->
-        <div class="col">
-          <div class="card h-100 shadow-sm">
-            <img src="https://image.thum.io/get/width/400/crop/250/https://pl-zeta.vercel.app" class="card-img-top" alt="PL시스템 썸네일" style="height:180px; object-fit:cover;">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">PL시스템</h5>
-              <p class="card-text text-muted">pl-zeta.vercel.app</p>
-            </div>
-            <div class="card-footer d-flex justify-content-end align-items-center">
-              <a href="https://pl-zeta.vercel.app" target="_blank" class="btn btn-sm btn-outline-primary">바로가기</a>
-            </div>
-          </div>
-        </div>
+    <div class="portfolio-section">
+      <p class="portfolio-label">Works</p>
+      <h2 class="portfolio-title">제작한 사이트</h2>
+      <div class="portfolio-grid">
 
-        <!-- 오예스 -->
-        <div class="col">
-          <div class="card h-100 shadow-sm">
-            <img src="https://image.thum.io/get/width/400/crop/250/https://www.ohyess.kr" class="card-img-top" alt="오예스 썸네일" style="height:180px; object-fit:cover;">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">오예스</h5>
-              <p class="card-text text-muted">www.ohyess.kr</p>
-            </div>
-            <div class="card-footer d-flex justify-content-end align-items-center">
-              <a href="https://www.ohyess.kr" target="_blank" class="btn btn-sm btn-outline-success">바로가기</a>
-            </div>
+        <a class="pf-card" href="https://pl-zeta.vercel.app" target="_blank">
+          <img class="pf-thumb" src="https://image.thum.io/get/width/600/crop/370/https://pl-zeta.vercel.app" alt="PL시스템">
+          <div class="pf-info">
+            <p class="pf-name">PL시스템</p>
+            <p class="pf-url">pl-zeta.vercel.app</p>
           </div>
-        </div>
+        </a>
 
-        <!-- 슈어라인 -->
-        <div class="col">
-          <div class="card h-100 shadow-sm">
-            <img src="https://image.thum.io/get/width/400/crop/250/https://www.sureline.kr" class="card-img-top" alt="슈어라인 썸네일" style="height:180px; object-fit:cover;">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">슈어라인</h5>
-              <p class="card-text text-muted">www.sureline.kr</p>
-            </div>
-            <div class="card-footer d-flex justify-content-end align-items-center">
-              <a href="https://www.sureline.kr" target="_blank" class="btn btn-sm btn-outline-danger">바로가기</a>
-            </div>
+        <a class="pf-card" href="https://www.ohyess.kr" target="_blank">
+          <img class="pf-thumb" src="https://image.thum.io/get/width/600/crop/370/https://www.ohyess.kr" alt="오예스">
+          <div class="pf-info">
+            <p class="pf-name">오예스</p>
+            <p class="pf-url">www.ohyess.kr</p>
           </div>
-        </div>
+        </a>
 
-        <!-- 하우머치테슬라 -->
-        <div class="col">
-          <div class="card h-100 shadow-sm">
-            <img src="https://image.thum.io/get/width/400/crop/250/https://www.paytesla.kr" class="card-img-top" alt="하우머치테슬라 썸네일" style="height:180px; object-fit:cover;">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">하우머치테슬라</h5>
-              <p class="card-text text-muted">www.paytesla.kr</p>
-            </div>
-            <div class="card-footer d-flex justify-content-end align-items-center">
-              <a href="https://www.paytesla.kr" target="_blank" class="btn btn-sm btn-outline-danger">바로가기</a>
-            </div>
+        <a class="pf-card" href="https://www.sureline.kr" target="_blank">
+          <img class="pf-thumb" src="https://image.thum.io/get/width/600/crop/370/https://www.sureline.kr" alt="슈어라인">
+          <div class="pf-info">
+            <p class="pf-name">슈어라인</p>
+            <p class="pf-url">www.sureline.kr</p>
           </div>
-        </div>
+        </a>
 
-        <!-- 이워크 -->
-        <div class="col">
-          <div class="card h-100 shadow-sm">
-            <img src="https://image.thum.io/get/width/400/crop/250/https://e-work.kr" class="card-img-top" alt="이워크 썸네일" style="height:180px; object-fit:cover;">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">이워크</h5>
-              <p class="card-text text-muted">e-work.kr</p>
-            </div>
-            <div class="card-footer d-flex justify-content-end align-items-center">
-              <a href="https://e-work.kr" target="_blank" class="btn btn-sm btn-outline-info">바로가기</a>
-            </div>
+        <a class="pf-card" href="https://www.paytesla.kr" target="_blank">
+          <img class="pf-thumb" src="https://image.thum.io/get/width/600/crop/370/https://www.paytesla.kr" alt="하우머치테슬라">
+          <div class="pf-info">
+            <p class="pf-name">하우머치테슬라</p>
+            <p class="pf-url">www.paytesla.kr</p>
           </div>
-        </div>
+        </a>
+
+        <a class="pf-card" href="https://e-work.kr" target="_blank">
+          <img class="pf-thumb" src="https://image.thum.io/get/width/600/crop/370/https://e-work.kr" alt="이워크">
+          <div class="pf-info">
+            <p class="pf-name">이워크</p>
+            <p class="pf-url">e-work.kr</p>
+          </div>
+        </a>
 
       </div>
     </div>
